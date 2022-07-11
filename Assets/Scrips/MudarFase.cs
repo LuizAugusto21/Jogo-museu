@@ -28,36 +28,33 @@ public class MudarFase : MonoBehaviour
                 break;
             
             case "EntradaPrimeiroAndar":
-                SceneManager.LoadScene("Caverna");
+                SceneManager.LoadScene("");
                 break;
             
             case "EntradaSegundoAndar":
-                SceneManager.LoadScene("Caverna");
+                SceneManager.LoadScene("");
                 break;
 
             case "EntradaSalaAnatomia":
-                SceneManager.LoadScene("Caverna");
+                SceneManager.LoadScene("");
                 break;
 
             case "EntradaSalaDinossauros":
-                SceneManager.LoadScene("Caverna");
+                SceneManager.LoadScene("");
                 break;
 
             case "EntradaSalaIndigenas":
-                SceneManager.LoadScene("Caverna");
+                SceneManager.LoadScene("");
                 break;
 
             case "EntradaSalaRN":
-                SceneManager.LoadScene("Caverna");
+                SceneManager.LoadScene("");
                 break;
 
 
             default:
                 Debug.Log("Coloque o nome correto");
                 break;
-        }
-        if(area.name == "EntradaCaverna"){
-            SceneManager.LoadScene("Caverna");
-        }
+            }
     }
 }
