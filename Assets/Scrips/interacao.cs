@@ -9,6 +9,8 @@ public class interacao : MonoBehaviour
     public Text mensagemInteracao;
     private GameObject jogador;
     public Canvas dialogo;
+
+    bool inside = false;
    
     void Start()
     {
@@ -19,23 +21,21 @@ public class interacao : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if( inside && Input.GetKeyDown("f")){
+            Debug.Log("FFF");
 
-    }
-
-    void OnTriggerEnter2D(){
-        mensagemInteracao.enabled=true;
-    }
-
-    void OnTriggerStay2D(){
-
-        if(Input.GetKeyDown("f")){
             mensagemInteracao.enabled=false;
             dialogo.enabled=true;
-
         }
     }
 
+    void OnTriggerEnter2D(){
+        inside = true;
+        mensagemInteracao.enabled=true;
+    }
+
     void OnTriggerExit2D(){
+        inside = false;
         mensagemInteracao.enabled=false;
         dialogo.enabled=false;
     }
