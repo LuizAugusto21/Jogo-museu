@@ -9,11 +9,13 @@ public class InteracaoItem : MonoBehaviour
     public Text mensagemInteracao;
     private GameObject jogador;
     public GameObject item;
+    public bool gotLanterna;
    
     void Start()
     {
         mensagemInteracao.enabled=false;
         item.SetActive(true);
+        gotLanterna = false;
     }
 
     // Update is called once per frame
@@ -30,6 +32,7 @@ public class InteracaoItem : MonoBehaviour
 
         if(Input.GetKeyDown("f")){
             mensagemInteracao.enabled=false;
+            gotLanterna = true;
             item.SetActive(false);
 
         }
