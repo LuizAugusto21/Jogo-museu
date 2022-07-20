@@ -10,6 +10,7 @@ public class MudarFase : MonoBehaviour
     public GameObject area;
     public bool gotLanterna;
     public InteracaoItem lanterna;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +22,14 @@ public class MudarFase : MonoBehaviour
     void Update()
     {
         gotLanterna = lanterna.gotLanterna;
-    }
 
+    }
+    void OnTriggerExit2D(){
+        mensagemInteracao.enabled = false;
+    }
     void OnTriggerEnter2D(){
         if(gotLanterna == false){
-            mensagemInteracao.enabled=true;
+            mensagemInteracao.enabled = true;
             return;
         }
         switch (area.name)
